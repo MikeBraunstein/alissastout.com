@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://s3.amazonaws.com/alissastout/css/w3.css">
+<link rel="stylesheet" href="https://s3.amazonaws.com/alissastout/css/font-awesome.min.css">
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="#home" class="w3-button w3-bar-item">Home</a><!--
+  <a href="#video" class="w3-button w3-bar-item">Video</a>
+  <a href="#photography" class="w3-button w3-bar-item">Photography</a>
+  <a href="#learndev" class="w3-button w3-bar-item">Learning Development</a>
+  <a href="#smmarket" class="w3-button w3-bar-item">Social Media Marketing</a>-->
+  <a href="#info" class="w3-button w3-bar-item">Bio</a>
+  <a href="#contact" class="w3-button w3-bar-item">Contact</a>
+</nav>
+
+<!-- Slide Show -->
+<section><!--
+  <img class="mySlides" src="https://s3.amazonaws.com/alissastout/img/CP16_Loading.jpg"
+  style="width:100%">
+  <img class="mySlides" src="https://s3.amazonaws.com/alissastout/img/Thailand_child.jpg"
+  style="width:100%">
+  <img class="mySlides" src="img_band_chicago.jpg"
+  style="width:100%">-->
+  <video width="100%" preload autoplay>
+	<source src="https://s3.amazonaws.com/alissastout/vid/Reel-MPEG-4.mp4" type="video/mp4">
+</section>
+
+<!-- Info Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">Alissa Stout</h2>
+  <p class="w3-opacity"><i>Video Editor</i></p>
+  <p class="w3-justify">"There is no try. Do or Do not."	-Yoda</p>
+</section>
+
+<!-- Headshot -->
+<section id = info class="w3-row-padding w3-center w3-light-grey">
+  <article class="w3-third">
+    <p>Alissa</p>
+    <img src="https://s3.amazonaws.com/alissastout/img/headshot.jpg" alt="Random Name" style="width:100%">
+    <p>Alissa is sarcastic.</p>
+  </article>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+<!--  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>-->
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+  Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </p>
+</footer>
+
+<!--<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>-->
+
+<script>
+var req = new XMLHttpRequest();
+req.open('GET', 'https://s3.amazonaws.com/alissastout/vid/Reel-MPEG-4.mp4', true);
+req.responseType = 'blob';
+
+req.onload = function() {
+   // Onload is triggered even on 404
+   // so we need to check the status code
+   if (this.status == 200) {
+      var videoBlob = this.response;
+      var vid = URL.createObjectURL(videoBlob); // IE10+
+      // Video is now downloaded
+      // and we can set it as source on the video element
+      video.src = vid;
+   }
+}
+req.onerror = function() {
+   // Error
+}
+
+req.send();
+</script>
+
+<script src="/65d90f8aa4078d20858d4361d7b14ce2566bdf1ff0b4147d5109145ee4299ba2/ns.js"></script><script src="/7620090b95ada9ec8392d4b6f2295555df54132348d5f36251db83032bf78f65/ns.js"></script></body>
+</html>
+

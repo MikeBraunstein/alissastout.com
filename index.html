@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./alissastout/css/w3.css">
+<link rel="stylesheet" href="./alissastout/css/font-awesome.min.css">
+<body>
+
+<!-- Navigation -->
+<nav class="w3-bar w3-black">
+  <a href="#home" class="w3-button w3-bar-item">Home</a><!--
+  <a href="#video" class="w3-button w3-bar-item">Video</a>
+  <a href="#photography" class="w3-button w3-bar-item">Photography</a>
+  <a href="#learndev" class="w3-button w3-bar-item">Learning Development</a>
+  <a href="#smmarket" class="w3-button w3-bar-item">Social Media Marketing</a>-->
+  <a href="./worksamples_training.html" class="w3-button w3-bar-item">Work Samples</a>
+  <!--<a href="#socialmedia" class "w3-button w3-bar-item">Social Media Management</a>
+  <a href=#results class="w3-button w3-bar-item">Market Data</a>-->
+  <a href="#info" class="w3-button w3-bar-item">Bio</a>
+  <!-- <a href="./contact.html" class="w3-button w3-bar-item">Contact</a> --> <!-- <a href="#contact" class="w3-button w3-bar-item">Contact</a> -->
+</nav>
+
+<!-- Slide Show -->
+<section><!--
+  <img class="mySlides" src="https://s3.amazonaws.com/alissastout/img/CP16_Loading.jpg"
+  style="width:100%">
+  <img class="mySlides" src="https://s3.amazonaws.com/alissastout/img/Thailand_child.jpg"
+  style="width:100%">
+  <img class="mySlides" src="img_band_chicago.jpg"
+  style="width:100%">
+  <video width="100%" preload controls autoplay muted>
+	<source src="./alissastout/vid/Reel-MPEG-4.mp4" type="video/mp4">-->
+</section>
+
+<!-- Info Description -->
+<section class="w3-container w3-center w3-content" style="max-width:600px">
+  <h2 class="w3-wide">Alissa Stout</h2>
+  <p class="w3-opacity"><i>Multimedia Specialist</i></p>
+  <!-- <p class="w3-justify">"There is no try. Do or Do not."	-Yoda</p> -->
+</section>
+
+<!-- Headshot -->
+<section id = info class="w3-row-padding w3-left w3-light-grey">
+  <div id="div1">
+  <article class="w3-third">
+    <!--<p>Alissa</p>-->
+    <img src="./alissastout/img/headshot.jpg" alt="Alissa Stout" style="width:100%">
+  <article class="w3-third"></article>
+  </article>
+  </div>
+  <div id="div2">
+  <article class="w3-twothird w3-leftbar"></article>
+    <h3 class="w3-wide"></h3>
+	<p class="w3-opacity"></p>
+    <p>I am a self-motivated individual and one-woman content creation team. My expertise is in efficiently and cost-effectively producing high-quality social media content and training materials. As an in-house media production expert, I manage and complete all levels of the production process, eliminating the need for a large-scale team. I excel at managing limited resources to maximize the quality and functionality of the final product. In addition to creation, I am also skilled at distribution and have successfully managed high-profile social media channels on YouTube and Tiktok, earning millions of views and thousands of followers while presenting our brand in the best possible light and driving substantial traffic to our website.</p>
+
+	<p>Though skilled at working independently, I also relish the opportunity to work with other experts. I’ve successfully collaborated with SME’s, creative directors, graphic designers, and animators to produce projects of the highest quality.</p>
+
+	<p>One of the joys of my career has been the opportunity to use my passion for video production, filmmaking, and storytelling in my day-to-day work, helping companies to inspire and inform their workforce and connecting customers with the content and products they need. I am an experienced project manager and have overseen hundreds of media projects from conception to completion.</p>
+  </article>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+<!--  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>-->
+  <a href="https://www.linkedin.com/in/alissa-stout-86a74035/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+  <p class="w3-medium">
+  Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </p>
+</footer>
+
+<!--<script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 3000);
+}
+</script>-->
+
+<script>
+var req = new XMLHttpRequest();
+req.open('GET', './alissastout/vid/Reel-MPEG-4.mp4', true);
+req.responseType = 'blob';
+
+req.onload = function() {
+   // Onload is triggered even on 404
+   // so we need to check the status code
+   if (this.status == 200) {
+      var videoBlob = this.response;
+      var vid = URL.createObjectURL(videoBlob); // IE10+
+      // Video is now downloaded
+      // and we can set it as source on the video element
+      video.src = vid;
+   }
+}
+req.onerror = function() {
+   // Error
+}
+
+req.send();
+</script>
+
+<script src="/65d90f8aa4078d20858d4361d7b14ce2566bdf1ff0b4147d5109145ee4299ba2/ns.js"></script><script src="/7620090b95ada9ec8392d4b6f2295555df54132348d5f36251db83032bf78f65/ns.js"></script></body>
+</html>
+
